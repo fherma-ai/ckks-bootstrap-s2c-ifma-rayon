@@ -1,0 +1,4 @@
+kind = "solution"
+spec = "ckks-bootstrapping/s2c@1.0.0"
+fingerprint = "sha256:6f6268e39a58ca1d"
+harness = "poulpy-ckks-bootstrap-s2c"
