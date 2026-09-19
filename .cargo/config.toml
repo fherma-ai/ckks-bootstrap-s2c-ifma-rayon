@@ -1,0 +1,12 @@
+# Built for the machine it runs on.
+#
+# The intrinsics inside the chosen backend do not need this; everything
+# around them does — the NTT and the arithmetic in poulpy-hal are compiled
+# for baseline x86-64 otherwise, and a function marked with a target feature
+# is not inlined into a caller without it. Poulpy's own Cargo.toml asks for
+# `RUSTFLAGS="-C target-cpu=native"` on the SIMD backends; the platform builds
+# with a plain `cargo build --release`, so the flag lives here, where cargo
+# reads it. The binary is then specific to the machine that built it, which
+# on the platform is the machine that runs it.
+[build]
+rustflags = ["-C", "target-cpu=native"]
