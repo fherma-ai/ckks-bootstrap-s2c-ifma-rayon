@@ -6,6 +6,6 @@
   //
   // A sweep: the machine reports 24 vCPU, and whether asking for all of them
   // helps is what says whether they are cores or hardware threads. The row
-  // measured against the 0.8.3 board asks for 24; this one asks for 16.
-  "threads": 16
+  // measured against the 0.8.3 board asks for 24; this one asks for 12.
+  "threads": 12
 }
