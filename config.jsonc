@@ -3,6 +3,9 @@
 // in Cargo.toml (ref | neon[-rayon] | avx[-rayon] | avx512[-rayon] | ifma[-rayon]).
 {
   // Worker threads for a *-rayon backend. Single-thread backends ignore it.
-  // Every vCPU the platform's RTX PRO 6000 machine offers (Xeon 6776P, 24).
-  "threads": 24
+  //
+  // A sweep: the machine reports 24 vCPU, and whether asking for all of them
+  // helps is what says whether they are cores or hardware threads. The row
+  // measured against the 0.8.3 board asks for 24; this one asks for 16.
+  "threads": 16
 }
