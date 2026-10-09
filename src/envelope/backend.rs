@@ -7,7 +7,7 @@
 //! would not reproduce the bytes; they are deliberately not offered.
 
 #[cfg(feature = "ref")]
-pub type BE = poulpy_cpu_ref::NTT4x30Ref;
+pub type BE = poulpy_cpu_portable::NTT4x30Portable;
 #[cfg(feature = "ref")]
 pub const NAME: &str = "ntt4x30_ref";
 
